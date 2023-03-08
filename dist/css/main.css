@@ -1,7 +1,5 @@
-@font-face {
-  font-family: "Inter", sans-serif;
-  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-}
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *,
 *::before,
 *::after {
@@ -12,4 +10,144 @@
 
 body {
   font-family: "Inter", sans-serif;
+}
+
+.rainbow_button {
+  isolation: isolate;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 1.5rem 3.5rem;
+  background-image: linear-gradient(51deg, rgb(255, 57, 152) 7%, rgb(255, 129, 57) 44%, rgb(255, 129, 57) 75%, rgb(57, 255, 160) 100%);
+  border-radius: 5000px;
+  text-decoration: none;
+  color: #444;
+  position: relative;
+}
+.rainbow_button::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 5000px;
+  background-image: linear-gradient(#fff, #fff);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+header .logo img {
+  height: 30px;
+}
+header .logo h1 {
+  font-family: "Varela Round", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+header nav {
+  display: none;
+}
+header .burger {
+  width: 20px;
+  height: 4px;
+  border-radius: 100px;
+  background-color: #999999;
+  position: relative;
+  cursor: pointer;
+}
+header .burger::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  border-radius: 100px;
+  background-color: #999999;
+  translate: 0 -8px;
+}
+header .burger::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  border-radius: 100px;
+  background-color: #999999;
+  translate: 0 8px;
+}
+
+#hero {
+  display: flex;
+  padding: 1.5rem;
+}
+#hero .hero_text {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 4;
+}
+#hero .hero_text h6 {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 10%;
+  text-transform: uppercase;
+  color: #ff3998;
+}
+#hero .hero_text h2 {
+  margin-block: 1.5rem;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.15;
+}
+#hero .hero_text p {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding-right: 1rem;
+}
+#hero .hero_text .rainbow_button {
+  margin-block: 1.5rem 3rem;
+}
+#hero .hero_img {
+  flex: 2;
+  margin-right: -20%;
+}
+#hero .hero_img img {
+  width: 125%;
+  -webkit-filter: drop-shadow(-8px 4px 20px rgba(231, 22, 151, 0.5));
+}
+
+#upsell {
+  background-image: linear-gradient(51deg, rgb(255, 57, 152) 7%, rgb(255, 129, 57) 44%, rgb(255, 129, 57) 75%, rgb(57, 255, 160) 100%);
+  padding: 6rem 1.5rem 2rem;
+}
+#upsell h3 {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+#upsell p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+#press figure:has(img[alt="boomerang logo"]) {
+  display: none;
+}
+#press figure:has(img[alt="opendoor logo"]) {
+  display: none;
+}
+#press figcaption {
+  font-size: 2rem;
+  color: #999;
 }/*# sourceMappingURL=main.css.map */
