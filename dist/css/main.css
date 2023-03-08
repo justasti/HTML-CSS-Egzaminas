@@ -293,4 +293,53 @@ footer .upsell .upsell_img {
 }
 footer .upsell .upsell_img img {
   height: 450px;
+}
+footer .company_data {
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+footer .company_data p {
+  font-size: 1.25rem;
+  color: #555;
+  font-weight: 400;
+}
+footer .company_data .social_icons {
+  font-size: 1.25rem;
+  color: #999;
+  display: flex;
+  gap: 1rem;
+}
+footer .links {
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 175px);
+  row-gap: 1.5rem;
+}
+footer .links h5 {
+  color: #555;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+footer .links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+footer .links ul a {
+  text-decoration: none;
+  color: #555;
+}
+footer .legal p {
+  padding: 0 1.5rem 5rem;
+  color: #999;
+  font-size: 1.25rem;
+}
+footer .legal p:last-of-type {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
