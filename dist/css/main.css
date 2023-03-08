@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
@@ -38,6 +42,11 @@ body {
   color: #444;
 }
 
+section,
+footer {
+  scroll-margin-top: 3rem;
+}
+
 h2 {
   margin-block: 1.5rem;
   font-size: 3rem;
@@ -48,7 +57,7 @@ h2 {
 h6 {
   font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 10%;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: #ff3998;
 }
@@ -157,22 +166,20 @@ header .burger::after {
   padding: 4rem 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem 0.75rem;
   justify-content: center;
 }
 #press figure {
   width: 170px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 #press figure:has(img[alt="boomerang logo"]) {
   display: none;
 }
 #press figure:has(img[alt="opendoor logo"]) {
   display: none;
-}
-#press figure {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
 }
 #press figure img {
   height: 2.5rem;
@@ -279,6 +286,7 @@ footer .upsell {
   border-block: 1px solid #ddd;
   padding-top: 4rem;
   display: flex;
+  align-items: center;
   padding-left: 1.5rem;
 }
 footer .upsell .upsell_text h2 {
@@ -342,4 +350,150 @@ footer .legal p {
 }
 footer .legal p:last-of-type {
   display: none;
+}
+
+@media (min-width: 993px) {
+  header {
+    padding: 3rem;
+  }
+  header .burger {
+    display: none;
+  }
+  header nav {
+    display: unset;
+  }
+  header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.25rem;
+  }
+  header nav ul li {
+    font-size: 1.25rem;
+  }
+  header nav ul li a {
+    color: #555;
+    text-decoration: none;
+  }
+  header nav ul li:last-child a {
+    color: #ff3998;
+  }
+  #hero {
+    max-width: 1600px;
+    padding-left: 5rem;
+    margin-inline: auto;
+    padding-block: 5rem;
+    align-items: center;
+  }
+  #hero .hero_text {
+    flex: 1;
+  }
+  #hero .hero_text h2 {
+    font-size: 6rem;
+  }
+  #hero .hero_img {
+    flex: 1;
+    display: grid;
+    place-content: center;
+    margin: 0;
+    padding-inline: 3rem;
+  }
+  #hero .hero_img img {
+    -webkit-filter: drop-shadow(0px 0px 70px rgba(231, 22, 151, 0.5));
+    width: 100%;
+    max-width: 700px;
+  }
+  #upsell {
+    max-width: 1600px;
+    margin-inline: auto;
+    border-radius: 1rem;
+    padding: 9rem 4rem 4rem;
+  }
+  #press {
+    padding-block: 8rem;
+    max-width: 1600px;
+    margin-inline: auto;
+    justify-content: space-between;
+  }
+  #press figure {
+    width: unset;
+  }
+  #press figure:has(img[alt="boomerang logo"]) {
+    display: flex;
+  }
+  #press figure:has(img[alt="opendoor logo"]) {
+    display: flex;
+  }
+  #press figure:has(img[alt="boom logo"]) {
+    display: none;
+  }
+  #press figure figcaption {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+  }
+  #showcase {
+    max-width: 1600px;
+    margin-inline: auto;
+  }
+  footer {
+    max-width: 1600px;
+    margin-inline: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  footer .upsell {
+    grid-column: span 2;
+    width: 100%;
+    padding-block: 5rem;
+    align-items: center;
+  }
+  footer .upsell .upsell_text {
+    flex: 1;
+  }
+  footer .upsell .upsell_text h2 {
+    font-size: 3.5rem;
+  }
+  footer .upsell .upsell_img {
+    flex: 1;
+    display: grid;
+    place-content: center;
+    margin: 0;
+  }
+  footer .upsell .upsell_img img {
+    width: 100%;
+    max-width: 700px;
+  }
+  footer .links {
+    display: flex;
+  }
+  footer .links > * {
+    flex: 1;
+  }
+  footer .links > * li a {
+    font-size: 1.25rem;
+  }
+  footer .legal {
+    padding-top: 4rem;
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .legal p:last-of-type {
+    display: unset;
+  }
+}
+@media (min-width: 1100px) {
+  #showcase .cards {
+    overflow: hidden;
+    margin: 1.5rem;
+  }
+  #showcase .cards .card {
+    flex: 1;
+  }
+  #showcase .cards .card > img {
+    width: 100%;
+  }
+  #showcase .cards .card:last-of-type {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
 }/*# sourceMappingURL=main.css.map */
