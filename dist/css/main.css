@@ -83,6 +83,7 @@ header .burger::after {
 }
 
 #hero {
+  overflow: hidden;
   display: flex;
   padding: 1.5rem;
 }
@@ -141,13 +142,125 @@ header .burger::after {
   line-height: 1.5;
 }
 
+#press {
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+#press figure {
+  width: 170px;
+}
 #press figure:has(img[alt="boomerang logo"]) {
   display: none;
 }
 #press figure:has(img[alt="opendoor logo"]) {
   display: none;
 }
-#press figcaption {
+#press figure {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+#press figure img {
+  height: 2.5rem;
+}
+#press figure figcaption {
   font-size: 2rem;
   color: #999;
+}
+
+#showcase {
+  padding-top: 0;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #ddd;
+}
+#showcase h3 {
+  padding-inline: 1.5rem;
+  color: #111;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+#showcase p {
+  padding-inline: 1.5rem;
+  color: #555;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+#showcase p a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+#showcase .cards {
+  margin: 1.5rem;
+  margin-right: 0;
+  display: flex;
+  gap: 2rem;
+  overflow-x: scroll;
+}
+#showcase .cards::-webkit-scrollbar {
+  height: 10px;
+  width: 60%;
+}
+#showcase .cards::-webkit-scrollbar-track {
+  border-radius: 50px;
+  background-color: #ddd;
+}
+#showcase .cards::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  width: 10px;
+  background-color: purple;
+}
+#showcase .cards .card {
+  border-radius: 1rem;
+  background-color: #eee;
+  margin-bottom: 1rem;
+}
+#showcase .cards .card .description {
+  padding: 1rem;
+}
+#showcase .cards .card .description .row1,
+#showcase .cards .card .description .row2,
+#showcase .cards .card .description .row3 {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+#showcase .cards .card .description .row1 p,
+#showcase .cards .card .description .row2 p,
+#showcase .cards .card .description .row3 p {
+  padding-inline: 0;
+}
+#showcase .cards .card .description .row1 {
+  text-transform: uppercase;
+}
+#showcase .cards .card .description .row1 p {
+  font-size: 0.75rem;
+}
+#showcase .cards .card .description .row1 p:first-child {
+  color: #ff8139;
+}
+#showcase .cards .card .description .row2 p {
+  color: #111;
+  align-items: center;
+}
+#showcase .cards .card .description .row2 p:nth-child(2) {
+  display: flex;
+  gap: 0.35rem;
+}
+#showcase .cards .card .description .row3 p {
+  color: #777;
+  font-size: 1.125rem;
+}
+#showcase .cards .card:last-of-type {
+  margin-right: 1.5rem;
+}
+
+footer {
+  padding-top: 3rem;
 }/*# sourceMappingURL=main.css.map */
